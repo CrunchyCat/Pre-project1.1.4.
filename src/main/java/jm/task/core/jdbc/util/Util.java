@@ -14,8 +14,9 @@ public class Util {
     private Util() { // Конструктор с реализацией подключения к БД
 
         try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url, userName, password);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
