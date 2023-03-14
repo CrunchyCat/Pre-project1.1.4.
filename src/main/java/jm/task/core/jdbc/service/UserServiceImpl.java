@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    private Util util = Util.createUtil();                    // Поле для получения connection
+
     private final UserDao userDao = new UserDaoJDBCImpl();    // объект для  переиспользования методов из dao
     public void createUsersTable() {
         userDao.createUsersTable();
